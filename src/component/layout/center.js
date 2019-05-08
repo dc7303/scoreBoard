@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-export class Left extends Component {
+import '../../css/center.css';
+
+export class Center extends Component {
 
   constructor(props) {
     super(props);
@@ -8,8 +10,8 @@ export class Left extends Component {
 
   render() {
     return (
-    <div classNmae="left">
-      <h1>Left</h1>
+    <div className="center">
+      <h1>center</h1>
     </div>
     );
   }

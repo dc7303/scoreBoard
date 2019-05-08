@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Center } from './center';
-import { Right } from './right';
-import { Left } from './left';
-import { Top } from './top';
+import { Top } from './layout/top';
+import { Center } from './layout/center';
+import { Left } from './layout/left';
+import { Right } from './layout/right';
+
+import '../css/counter.css';
 
 export class Counter extends Component {
 

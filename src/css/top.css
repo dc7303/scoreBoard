@@ -1,0 +1,10 @@
+.top {
+  position: absolute;
+  width: 50%;
+  margin-left: 25%;
+  height: 200px;
+}
+
+.top .timer {
+  font-size: 120px;
+}
