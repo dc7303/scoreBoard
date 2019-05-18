@@ -16,6 +16,29 @@ export class Right extends Component {
     this.advantageHandler = this.advantageHandler.bind(this);
     this.penaltyHandler = this.penaltyHandler.bind(this);
     this.initPoint = this.initPoint.bind(this);
+    this.initAdvantage = this.initAdvantage.bind(this);
+    this.initPenalty = this.initPenalty.bind(this);
+    
+  }
+
+  initAll() {
+    this.setState({
+      penaltyCnt: 0,
+      pointCnt: 0,
+      advantageCnt: 0
+    });
+  }
+
+  initPenalty() {
+    this.setState({
+      penaltyCnt: 0
+    });
+  }
+
+  initAdvantage() {
+    this.setState({
+      advantageCnt: 0
+    });
   }
 
   /** 포인트 초기화 */
@@ -61,7 +84,7 @@ export class Right extends Component {
       <div className="point">
         <div className="title">POINTS</div>
         <div className="controller">
-        <div className="value">{this.state.pointCnt}</div>
+        <div className="value"  onClick={this.pointUpHandler(1)}>{this.state.pointCnt}</div>
           <button onClick={this.initPoint}>C</button>
           <button onClick={this.pointUpHandler(-1)}>-</button>
           <button onClick={this.pointUpHandler(4)}>4</button>
@@ -73,7 +96,8 @@ export class Right extends Component {
       <div className="advantage">
         <div className="title">ADVANTAGE</div>
         <div className="controller">
-          <div className="value">{this.state.advantageCnt}</div>
+          <div className="value" onClick={this.advantageHandler(1)}>{this.state.advantageCnt}</div>
+          <button onClick={this.initAdvantage}>c</button>
           <button onClick={this.advantageHandler(1)}>+</button>
           <button onClick={this.advantageHandler(-1)}>-</button>
         </div>
@@ -81,7 +105,8 @@ export class Right extends Component {
       <div className="penalty">
         <div className="title">PENALTY</div>
         <div className="controller">
-        <div className="value">{this.state.penaltyCnt}</div>
+        <div className="value" onClick={this.penaltyHandler(1)}>{this.state.penaltyCnt}</div>
+          <button onClick={this.initPenalty}>c</button>
           <button onClick={this.penaltyHandler(1)}>+</button>
           <button onClick={this.penaltyHandler(-1)}>-</button>
         </div>

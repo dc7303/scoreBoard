@@ -8,3 +8,15 @@
 .top .timer {
   font-size: 120px;
 }
+
+@media( min-width: 1300px ) {
+  .top .timer {
+    font-size: 135px;
+  }
+}
+
+@media( min-width: 1500px ) {
+  .top .timer {
+    font-size: 150px;
+  }
+}

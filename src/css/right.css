@@ -24,3 +24,64 @@
   font-size: 80px;
   color: red;
 }
+
+
+@media( min-width: 1300px ) {
+  .right {
+    float: right;
+    width: 25%;
+    height: 500px;
+    margin-top: 100px;
+    padding-right: 2%;
+  }
+  
+  .right .title {
+    font-size: 40px;
+    padding-top: 5%;
+    color: orange;
+  }
+  
+  .right .point .value {
+    font-size: 130px;
+  }
+  
+  .right .advantage .value {
+    font-size: 90px;
+    color: yellow;
+  }
+  
+  .right .penalty .value {
+    font-size: 90px;
+    color: red;
+  }
+}
+
+@media( min-width: 1500px ) {
+  .right {
+    float: right;
+    width: 25%;
+    height: 500px;
+    margin-top: 100px;
+    padding-right: 5%;
+  }
+  
+  .right .title {
+    font-size: 50px;
+    padding-top: 5%;
+    color: orange;
+  }
+  
+  .right .point .value {
+    font-size: 140px;
+  }
+  
+  .right .advantage .value {
+    font-size: 100px;
+    color: yellow;
+  }
+  
+  .right .penalty .value {
+    font-size: 100px;
+    color: red;
+  }
+}

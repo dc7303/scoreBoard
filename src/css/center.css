@@ -5,3 +5,29 @@
   height: 500px;
   margin-top: 200px;
 }
+
+.center .img {
+  padding-top: 5%;
+}
+
+@media( min-width: 1300px ) {
+  .center {
+    margin-top: 220px;
+  }
+
+  .center .img {
+    width: 530px;
+    height: 530px;
+  }
+}
+
+@media( min-width: 1500px ) {
+  .center {
+    margin-top: 250px;
+  }
+
+  .center .img {
+    width: 580px;
+    height: 580px;
+  }
+}

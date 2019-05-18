@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import '../../css/center.css';
+import logo from '../../assets/img/logo.jpg';
 
 export class Center extends Component {
 
@@ -11,7 +12,7 @@ export class Center extends Component {
   render() {
     return (
     <div className="center">
-      <h1>center</h1>
+      <img src={logo} class="img"></img>
     </div>
     );
   }

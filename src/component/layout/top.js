@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import '../../css/top.css';
+import timeout from '../../assets/sound/Timeout.wav';
 
 export class Top extends Component {
 
@@ -11,6 +12,8 @@ export class Top extends Component {
     isStart: false,
   };
 
+  audio;
+
   constructor(props) {
     super(props);
     this.minSelectHandler = this.minSelectHandler.bind(this);
@@ -19,6 +22,15 @@ export class Top extends Component {
     this.startHandler = this.startHandler.bind(this);
     this.getDateValue = this.getDateValue.bind(this);
     this.timerCallback = this.timerCallback.bind(this);
+    this.stopHandler = this.stopHandler.bind(this);
+    this.audio = new Audio(timeout);
+  }
+
+  stopHandler() {
+    clearInterval(this.state.interval);
+    this.setState({
+      isStart: false
+    });
   }
 
   getDateValue() {
@@ -52,6 +64,7 @@ export class Top extends Component {
 
     if (min === 0 && sec === 0) {
       clearInterval(this.state.interval);
+      this.audio.play();
       this.initSelect();
       this.setState({
         isStart: false
@@ -77,11 +90,13 @@ export class Top extends Component {
   }
 
   resetHandler() {
+    /**
     this.setState({
       min: '00',
       sec: '00'
     });
     
+    this.props.resetAll();
     if (this.state.isStart) {
       clearInterval(this.state.interval);
       this.setState({
@@ -90,6 +105,8 @@ export class Top extends Component {
     }
 
     this.initSelect();
+    */
+    window.location.reload();
   }
 
   initSelect() {
@@ -136,6 +153,7 @@ export class Top extends Component {
       <div className="timer">{this.state.min}:{this.state.sec}</div>
       <div className="control-box">
         <button onClick={this.startHandler}>start</button>
+        <button onClick={this.stopHandler}>stop</button>
         <button onClick={this.resetHandler}>reset</button>
       </div>
     </div>
